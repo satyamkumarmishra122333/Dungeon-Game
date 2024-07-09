@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dungeon Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jersey+10+Charted&display=swap"
+        rel="stylesheet">
+    <style>
+        *{
+            overflow-x: hidden;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-image: url('background.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: darken;
+            background-color: rgba(0, 0, 0, 0.551);
+
+        }
+
+        .cards {
+            display: flex;
+            justify-content: space-around;
+            /* background-image: url('https://i.gifer.com/4HVB.gif'); */
+        }
+
+        .card {
+            width: 25vw;
+            box-shadow: 0 0 45px #5E4038;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card img {
+            width: 25vw;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .door-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #734538;
+            color: #fff;
+            border: none;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+            margin: auto;
+        }
+
+        .door-button:hover {
+            background-color: #4e3c20;
+        }
+
+        .section2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url('https://wallpapers.com/images/high/old-scroll-blank-parchment-background-gn03yv5kwibwch16-gn03yv5kwibwch16.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 80vw;
+            height: 40vh;
+            width: auto;
+            margin: 20px;
+            overflow-y: hidden;
+        }
+
+        .hint {}
+
+        .run {
+            animation: run 5s linear;
+            position: absolute;
+            top: 51vh;
+            
+        }
+
+        #room-description {
+            color: #5a2603;
+            font-size: xx-large;
+            font-family: "Jersey 10 Charted", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            padding: 3vw;
+            transition: all .5s ease-out;
+            padding: 10vw;
+           
+        }
+        .run img{
+            width: 10vw;
+        }
+        .footer{
+            display: inline-flex;
+            color: white;
+            animation: footer 120s linear infinite;
+            text-wrap: nowrap;
+            gap: 3vw;
+        }
+        footer div{
+            text-wrap: nowrap;
+           
+        }
+        @keyframes run {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(2200%);
+            }
+        }
+        @keyframes footer {
+            from{
+                transform: translateX(0);
+
+            }
+            to{
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="door-buttons">
+        <div class="cards">
+
+            <div class="card">
+                <img src="door1.jpeg" alt="">
+                <button class="door-button" onclick="chooseDoor('A')">Door A</button>
+            </div>
+            <div class="card">
+                <img src="door2.jpeg" alt="">
+                <button class="door-button" onclick="chooseDoor('B')">Door B</button>
+            </div>
+            <div class="card">
+                <img src="door3.jpeg" alt="">
+                <button class="door-button" onclick="chooseDoor('C')">Door C</button>
+            </div>
+        </div>
+        <div class="section2">
+            <div class="hint">
+
+                <div id="room-description">You are in Starting room and find yourself in the depths of a mysterious dungeon. There are three doors ahead labeled A, B, and C.<br>Hint for Door A: This door may led to what you desire most!<br>Hint for Door B: Feel for a gns of light; they may reveal what all of us desire, The power and wealth. That ultimately grant freedom.<br>Hint for Door C:Look for subtle signs of light; they may reveal the correct path.</div>
+            </div>
+
+        </div>
+        <div class="run">
+            <img src="https://i.gifer.com/ZJFD.gif" alt="">
+        </div>
+        <div class="footer">
+            <div>This game is made by Satyam.</div>
+            <div>This game is made by Satyam.</div>
+            <div>This game is made by Satyam.</div>
+            <div>This game is made by Satyam.</div>
+            <div>This game is made by Satyam.</div>
+            <div>This game is made by Satyam.</div>
+            <div>This game is made by Satyam.</div>
+            <div>This game is made by Satyam.</div>
+            <div>This game is made by Satyam.</div>
+            <div>This game is made by Satyam.</div>
+            <div>This game is made by Satyam.</div>
+            <div>This game is made by Satyam.</div>
+            <div>This game is made by Satyam.</div>
+            <div>This game is made by Satyam.</div>
+            <div>This game is made by Satyam.</div>
+            <div>This game is made by Satyam.</div>
+            <div>This game is made by Satyam.</div>
+            <div>This game is made by Satyam.</div>
+        </div>
+    </div>
+
+    <script>
+        const transitionTable = [
+            [1, 2, 0], // State 0: Starting Room
+            [0, 0, 3], // State 1: Room A
+            [4, 0, 0], // State 2: Room B
+            [0, 5, 0], // State 3: Room C
+            [0, 0, 6], // State 4: Room D
+            [7, 0, 0], // State 5: Room E
+            [8, 0, 0], // State 6: Room F
+            [0, 0, 0], // State 7: Final Room (Victory)
+            [0, 3, 0] // State 8: Hidden Room
+        ];
+
+        const roomDescriptions = [
+            "You are in Starting room and find yourself in the depths of a mysterious dungeon. There are three doors ahead labeled A, B, and C.Hint for Door A: Listen closely for faint echoes; they might guide your path.Hint for Door B: Feel for a gns of light; they may reveal the correct pathslight breeze; it could lead you in the right direction. Hint for Door C: Look for subtle si", 
+            "You enter Room A and encounter a dark corridor <br> Hint for Door A: Follow the faint glow in the darkness; it might lead to safety.<br>Hint for Door B: Listen for the sound of distant footsteps; they could indicate the way forward or backward.<br>Hint for Door C: Feel the warmth emanating from one of the doors; it may be the right choice.",
+            "You step into Room B, hearing faint whispers echoing through the walls.<br> Hint for Door A: Search for hidden clues near the door; they may point to the correct path.<br>Hint for Door B: Listen for the sound of dripping water; it could lead you to the the path you originate.<br>Hint for Door C: Feel the texture of the door handles; one might feel different from the others but also the same that felt before",
+            "You enter Room C, feeling a chill run down your spine.<br>Hint for Door A: Follow the faint trail of light; it may guide your way out or way into the trap.<br>Hint for Door B: Listen for the sound of silence; it could indicate the right door and path of salavation.<br>Hint for Door C: Feel the vibrations in the ground; they may lead you in the direction to way in.",
+            "You step into Room D and notice a faint glimmer in the distance.<br>Hint for Door A: Listen for the faint hum of energy; it might lead to an ending you want but in diffrent way.<br>Hint for Door B: Feel the temperature change near one of the doors; the struggle might increase.<br>Hint for Door C: Search for hidden markings near the doors; they could provide a clue to the treasure.",
+            "You enter Room E, your footsteps echoing loudly in the empty chamber.<br>Hint for Door A: Listen for the sound of rustling leaves; they might reveal the right path and the freedom you desire.<br>Hint for Door B: Feel for a sudden drop in temperature; it might be correct door but what abouth the warmth.<br>Hint for Door C: Search for subtle differences in the surroundings near each door; one might stand out. but this seems fimiliar",
+            "You enter Room F, the air heavy with anticipation.\n Hint for Door A: Glimse of golden light; it might guide to limitless power.Hint for Door B: Feel for a slight vibration in the floor near one of the doors; it could be significant.Hint for Door C: Look for the door with the faintest outline; it may lead to safety but is it saftey you desire",
+            "You finally reach the heart of the dungeon, Room G. Before you lies a shimmering portal, the key to your freedom. Thank You for playing",
+            "As you explore deeper into the dungeon, you stumble upon a hidden chamber. That is full of gold, dimaond and gems, BUT it came with the cost you need to start again<br>Hint for Door A: Glimse of light; it might guide to begining.<br>Hint for Door B: Feel for a slight vibration in the floor near one of the doors; it might not be what you desire but led to the correct path.Hint for Door C: Look for the door with the faintest outline; it may lead to safety but is it saftey you desire"
+        ];
+
+        const doorImages = [
+            ['door1.jpeg', 'door2.jpeg', 'door3.jpeg'], // Room 1
+            ['door4.jpeg', 'door5.jpeg', 'door6.jpeg'], // Room 2
+            ['door7.jpeg', 'door8.jpeg', 'door9.jpeg'], // Room 3
+            ['door10.jpeg', 'door11.jpeg', 'door12.jpeg'], // Room 4
+            ['door13.jpeg', 'door14.jpeg', 'door15.jpeg'], // Room 5
+            ['door16.jpeg', 'door17.jpeg', 'door18.jpeg'],
+            ['door19.jpeg', 'door20.jpeg', 'door21.jpeg'], // Room 6
+            ['door22.jpeg','door22.jpeg','door22.jpeg' ], // Room 7
+            ['treasure_room.jpeg','treasure_room.jpeg','treasure_room.jpeg'] // Room 8 (Treasure Room)
+        ];
+        let currentState = 0; // Starting state
+
+        // Function to update room description and transition to the next room
+        function chooseDoor(door) {
+            if (currentState === 7) {
+                // If already in the final room, display a message and prevent further transitions
+                document.getElementById('room-description').innerHTML = "Congratulations! You've escaped the dungeon and reached safety.";
+                document.getElementById('door-buttons').innerHTML = ''; // Remove door buttons
+                return;
+            }
+
+            // Change background to GIF URL for 2 seconds
+            document.querySelector('.cards').style.backgroundImage = "url('https://i.pinimg.com/originals/ec/d6/4f/ecd64ff363965d499c45bb74cf490d36.gif')";
+            setTimeout(() => {
+                document.querySelector('.cards').style.backgroundImage = "none"; // Revert back to original background
+            }, 2000);
+
+            const doorIndex = { 'A': 0, 'B': 1, 'C': 2 }[door]; // Map door label to index
+            currentState = transitionTable[currentState][doorIndex]; // Get next state
+            const cards = document.querySelectorAll('.card');
+            cards.forEach((card, index) => {
+                card.style.transform = 'scale(0)'; // Animate doors closing
+                setTimeout(() => {
+                    if (currentState < 7) {
+                        card.querySelector('img').src = doorImages[currentState][index]; // Change door image
+                    } else {
+                        // For rooms 7 and 8, display single door images
+                        card.querySelector('img').src = doorImages[currentState][0];
+                    }
+                    card.style.transform = 'scale(1)'; // Animate doors opening
+                }, 300); // Delay for animation
+            });
+            document.getElementById('room-description').innerHTML = roomDescriptions[currentState]; // Update room description
+        }
+        
+
+
+        function chooseDoor(door) {
+    if (currentState === 7) {
+        // If already in the final room, display a message and prevent further transitions
+        document.getElementById('room-description').textContent = "Congratulations! You've escaped the dungeon and reached safety.";
+        document.getElementById('door-buttons').innerHTML = ''; // Remove door buttons
+        return;
+    }
+
+    // Change background to GIF URL for 2 seconds
+    document.querySelector('.cards').style.backgroundImage = "url('https://i.pinimg.com/originals/ec/d6/4f/ecd64ff363965d499c45bb74cf490d36.gif')";
+    document.querySelector('.run').style.display = 'block'; // Make .run visible
+    setTimeout(() => {
+        document.querySelector('.cards').style.backgroundImage = "none"; // Revert back to original background
+        document.querySelector('.run').style.display = 'none'; // Hide .run after 2 seconds
+    }, 2000);
+
+    const doorIndex = { 'A': 0, 'B': 1, 'C': 2 }[door]; // Map door label to index
+    currentState = transitionTable[currentState][doorIndex]; // Get next state
+    const cards = document.querySelectorAll('.card');
+    cards.forEach((card, index) => {
+        card.style.transform = 'scale(0)'; // Animate doors closing
+        setTimeout(() => {
+                    if (currentState < 7) {
+                        card.querySelector('img').src = doorImages[currentState][index]; // Change door image
+                    } else {
+                        // For rooms 7 and 8, display single door images
+                        card.querySelector('img').src = doorImages[currentState][0];
+                    }
+                    card.style.transform = 'scale(1)'; // Animate doors opening
+                }, 300); // Delay for animation
+    });
+    document.getElementById('room-description').innerHTML = roomDescriptions[currentState]; // Update room description
+}
+
+// Hide .run initially
+document.querySelector('.run').style.display = 'none';
+
+// Add event listeners to door buttons to show .run when clicked
+const doorButtons = document.querySelectorAll('.door-button');
+doorButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        document.querySelector('.run').style.display = 'block';
+    });
+});
+
+    </script>
+</body>
+
+</html>
